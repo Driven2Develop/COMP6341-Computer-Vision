@@ -1,0 +1,61 @@
+Iymen Abdella ID: 40218280
+COMP425-6341 COMPUTER VISION
+Programming Assignment 1 
+February 01 2022
+
+Following the prompts on the command line to advance the program, make sure to input valid integers, strings, or empty space will throw an exception.
+To put in your own custom image just modify the 'imagepath' variable to point to yours.
+
+To setup this script make sure to have all the necessary modules installed: numpy, matplotlib, pytorch, etc...
+
+Part 1A:
+ - fairly straightforward, just follow the instructions at the command prompt.
+ - Recommend downsizing factor of 2 
+
+ Part 1B: 
+ - displays...
+
+ Part 2A:
+ - diagonnally shifts to the top corner. This computation is expensive, but for best results the kernel has to be applied multiple times
+ - in any case the image shifts by one pixel. 
+
+ Part 2B:
+ - For best results use a scale/sigma = 2 and Nsize of 3 
+ - With an Nsize of 5 or more the image gets extremely bright so make sure to adjust the sigma accordingly
+ - computation time is a few minutes, but gets much longer the larger the Nsize gets
+ - I only allowed gaussian filters of odd size, otherwise the center would have been ambiguous
+
+ Part 2C:
+ - the application of the DoG is difficult to see when in RGB, but you can make out the prominent edges faintly within the image
+ - if I had more time I would normalize and adjust, or convert to greyscale had that operation been allowed
+ - As well since the DoG is between two sigmas, I took the absolute value of the difference to save time figuring out which is larger
+ - computation time is about 1 min
+ - it is recommended to choose sigma values that are relatively close in size, like 2 and 2.1 for example, or 2 and 2.01
+
+ Part 3A: 
+ - sobel filter as expected
+ - separated the horizontal and vertical applications into two functions
+
+ Part 3B:
+
+ Part 3C:
+
+ Part 3D:
+ - testing shows that the best values for an upper and lower threshold are 100 and 180
+
+ Part 4A:
+ - Pytorch is a horribly sustained package i had to use like 3 different package managers to get it to work properly
+ and sometimes it doesnt work at all. I realized the problem is that Pytorch isnt known for keeping up to date with the latest package versions. 
+ I would never recommend doing this type of question on future assignments because its problematic and extremely error prone. 
+
+ Part 4B:
+
+ Part 5A:
+ - non maximum suppression was done in a 3x3 neighbourhood the logic is fairly straightforward. First take the gradient and do %2*pi so it lands in the unit circle. 
+ Next, based on the radians, find the line the orientation is closest to. The optios are vertical horizontal, or the two diagonals. Based on the line find the maximum 
+ magnitude of the pixels along that line
+ - there is no explicit imshow for this algo but it can be shown by commenting out the line 
+ '#cv2.imshow("Part 5A: Non Maximum Suppression", part5a())'
+ 
+ Part 5b:
+ - depends on a lot of the other algos so it takes a while to calculate. Once again the recommended threshold values are 100 and 180.
