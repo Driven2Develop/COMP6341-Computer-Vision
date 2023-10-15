@@ -26,4 +26,5 @@ The final project challenged the students to employ more modern image processing
     * **Loss Function:** Softmax & Cross Entropy
 * The real 'magic' of the neural network is the constructiuon of a deep **convolutional neural network** using Pytorch with optimizations in learning rate.
 * The convolutional layer performs well with image classification problems because of its shift invariance, and its unique architecture that transforms images into feature maps. Which are better suited for analysis of local patterns within an image. Among other benefits.
+* The program is captured within the jupyter notebook which is the skeleton of the script. 
 More details can be found within the project-desc.pdf 
