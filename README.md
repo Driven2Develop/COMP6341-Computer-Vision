@@ -2,14 +2,14 @@ A repo containing practice assignments based around the topic of Computer Vision
 
 All of them were written in python using the OpenCV or Pytorch library
 
-## Assignment 1: 
+## Im_proc 1: 
 Image processing techniques using python including:
 * resizing, downsampling, and upsampling
 * image translations, and filtering
 * Sobel operators to find derivatives of image and ensuing orientation
 * Non-max suppression as well as Canny edge detection
 
-## Assignment 2
+## Im_proc 2
 More image processing techniques including:
 * Hough transform for detecting the presence of shapes or lines
 * Harris corner detector
